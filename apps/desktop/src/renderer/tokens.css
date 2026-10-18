@@ -1,0 +1,92 @@
+/* Opaque Warm Paper surfaces keep contrast independent of native materials. */
+:root {
+    color-scheme: light dark;
+    --color-text: #1F1E1B;
+    --color-secondary: #5E5D59;
+    --color-border: #E6E3D8;
+    --color-soft-line: #EFEDE5;
+    --color-surface: #F5F4EE;
+    --color-elevated: #FFFFFF;
+    --color-surface-2: #FAF9F5;
+    --color-hover: #F5F4EE;
+    --color-selected: #EAE8DF;
+    --color-accent: #B5533A;
+    --color-accent-hover: #8E3F2C;
+    --color-accent-soft: #F6E7E1;
+    --color-action-text: #A84D36;
+    --color-on-accent: #FFFFFF;
+    --color-waiting: #995900;
+    --color-waiting-dot: #B6771A;
+    --color-running: #2C764B;
+    --color-idle-ring: #88857D;
+    --color-danger: #B3261E;
+    --color-danger-surface: #FBECE8;
+    --color-focus: #88857D;
+    --color-capture-surface: #FFFFFF;
+    --color-shadow: #1F1E1B2E;
+
+    --shadow-card: 0 8px 24px #1F1E1B14;
+    --shadow-popover: 0 16px 40px var(--color-shadow);
+    --shadow-bubble: 0 6px 18px #1F1E1B24;
+    --radius-xs: 6px;
+    --radius-sm: 8px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-round: 999px;
+    --space-1: 2px;
+    --space-2: 4px;
+    --space-3: 6px;
+    --space-4: 8px;
+    --space-5: 12px;
+    --space-6: 16px;
+    --space-7: 20px;
+    --space-8: 24px;
+    --space-9: 48px;
+    --font-xs: 12px;
+    --font-sm: 12px;
+    --font-md: 13px;
+    --font-body: 14px;
+    --font-lg: 17px;
+    --font-title: 19px;
+    --font-display: 20px;
+    --font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", system-ui, sans-serif;
+    --font-heading: ui-serif, "New York", "Songti SC", Georgia, serif;
+    font-family: var(--font-family);
+    font-size: var(--font-body);
+    line-height: 1.5;
+    color: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #F2F0E8;
+        --color-secondary: #B5B2A7;
+        --color-border: #3A3935;
+        --color-soft-line: #33322E;
+        --color-surface: #1C1B19;
+        --color-elevated: #262522;
+        --color-surface-2: #2D2C29;
+        --color-hover: #1C1B19;
+        --color-selected: #35332E;
+        --color-accent: #E07A5F;
+        --color-accent-hover: #EE957D;
+        --color-accent-soft: #3B2923;
+        --color-action-text: #E28167;
+        --color-on-accent: #1C1B19;
+        --color-waiting: #F0B45C;
+        --color-waiting-dot: #F0A93B;
+        --color-running: #5BC88A;
+        --color-idle-ring: #A8A59B;
+        --color-danger: #FF958A;
+        --color-danger-surface: #3D2825;
+        --color-focus: #B5B2A7;
+        --color-capture-surface: #262522;
+        --color-shadow: #00000066;
+        --shadow-card: 0 8px 24px #00000029;
+        --shadow-bubble: 0 6px 18px #00000040;
+    }
+}
+
+.icon { flex-shrink: 0; vertical-align: middle; }
+::placeholder { color: var(--color-secondary); opacity: 1; }
+::selection { background: var(--color-selected); color: var(--color-text); }

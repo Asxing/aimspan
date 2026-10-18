@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AimSpan｜意成 — Agent 在忙，思路不断</title>
+    <meta name="description" content="陪你在 Mac 上使用 Claude Code 与 Codex：一眼看清活跃会话，随手记下想法，切回来时用衔接卡接上思路。仅在本机运行。">
+    <link rel="canonical" href="https://asxing.github.io/aimspan/zh/">
+    <link rel="alternate" hreflang="en" href="https://asxing.github.io/aimspan/">
+    <link rel="alternate" hreflang="zh-CN" href="https://asxing.github.io/aimspan/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://asxing.github.io/aimspan/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AimSpan｜意成 — Agent 在忙，思路不断">
+    <meta property="og:description" content="看清 Claude Code 与 Codex 的活跃会话，记下等待时的想法，切回来就能接着做。数据留在你的 Mac 上。">
+    <meta property="og:url" content="https://asxing.github.io/aimspan/zh/">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="theme-color" content="#F5F4EE" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1C1B19" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/style.css">
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header container">
+      <a class="brand" href="#top" aria-label="AimSpan 首页">
+        <img src="../assets/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+        <span>AimSpan</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#features">功能</a>
+        <a href="#how">使用方式</a>
+        <a href="#privacy">隐私</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-small language-link" href="../" hreflang="en" lang="en">English</a>
+        <a class="button button-small github-button" href="https://github.com/Asxing/aimspan">GitHub</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">给同时开着多个 Claude Code 与 Codex 会话的你</p>
+          <h1 id="hero-title">Agent 在忙，<br>思路不断。</h1>
+          <p class="lead">AimSpan 待在菜单栏里，帮你看清哪些会话在运行、哪些在等你。等待时随手记下想法，切回来就知道刚才发生了什么。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/Asxing/aimspan/releases/latest">下载 macOS 版</a>
+            <a class="button" href="https://github.com/Asxing/aimspan">查看源码</a>
+          </div>
+          <p class="hero-note">开源 · MIT 许可 · 完全在你的 Mac 上运行</p>
+        </div>
+
+        <!-- TODO: Add real screenshots under site/assets/screenshots/ using synthetic sessions only. -->
+        <figure class="product-composition" aria-labelledby="preview-caption">
+          <div class="session-panel">
+            <ul class="session-list" role="list" aria-label="示例会话">
+              <li class="session-row session-waiting">
+                <span class="status-dot waiting-dot" aria-hidden="true"></span>
+                <div class="session-copy">
+                  <p class="session-title">梳理产品范围</p>
+                  <p class="session-meta waiting-text">等你 · 8 分钟前结束</p>
+                </div>
+                <span class="idea-count">想法 2</span>
+              </li>
+              <li class="session-row">
+                <span class="status-dot running-dot" aria-hidden="true"></span>
+                <div class="session-copy">
+                  <p class="session-title">修复移动端导航栏</p>
+                  <p class="session-meta running-text">运行中 · 已运行 6 分钟</p>
+                </div>
+              </li>
+              <li class="session-row">
+                <span class="status-dot running-dot" aria-hidden="true"></span>
+                <div class="session-copy">
+                  <p class="session-title">整理 Agent 记忆相关论文</p>
+                  <p class="session-meta running-text">运行中 · 已运行 41 分钟</p>
+                </div>
+              </li>
+            </ul>
+            <div class="saved-idea">
+              <p class="idea-label">我的想法 · 留着稍后继续</p>
+              <p class="idea-text">重启后也检查一下气泡上的数量。</p>
+            </div>
+          </div>
+          <div class="status-bubble" role="img" aria-label="2 个运行中 · 1 个等你">
+            <span class="running-text" aria-hidden="true">2</span>
+            <span class="waiting-text" aria-hidden="true">1</span>
+          </div>
+          <figcaption id="preview-caption">界面示意，会话与想法均为虚构。</figcaption>
+        </figure>
+      </section>
+
+      <section id="features" class="features section-band" aria-labelledby="features-title">
+        <div class="container section-content">
+          <h2 id="features-title" class="section-intro">Agent 跑得久，思路容易断。<br>AimSpan 帮你接住。</h2>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-symbol" aria-hidden="true">
+                <span class="status-dot running-dot"></span>
+                <span class="status-dot waiting-dot"></span>
+              </div>
+              <h3>一眼看清活跃会话</h3>
+              <p>Claude Code 与 Codex 中运行中、等你的会话，都放在一个列表里。会话会一直保持“等你”，直到你标记“已处理”，或在原 App 中发出新指令。</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-symbol"><kbd aria-label="Command、Shift 和空格键">⌘ ⇧ Space</kbd></div>
+              <h3>随手记下，不打断思路</h3>
+              <p>按快捷键，写下想法，回车保存。用快捷记录把想法记到对应会话或收件箱，然后继续手头的事。</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-symbol">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                  <path d="M4 12a8 8 0 1 0 2.3-5.6"></path>
+                  <path d="M4 4v4h4"></path>
+                </svg>
+              </div>
+              <h3>切回来，顺着往下做</h3>
+              <p>衔接卡把执行结果、最近动态和你记下的想法放在一起。点击带回，就会复制想法并打开原 App；粘贴和发送由你完成。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="container section-content" aria-labelledby="how-title">
+        <h2 id="how-title">使用方式</h2>
+        <ol class="steps" role="list">
+          <li>
+            <span class="step-number" aria-hidden="true">1</span>
+            <h3>装好，打开</h3>
+            <p>AimSpan 从本机的 Claude Code 与 Codex 记录中发现会话。不用安装 Hook，也不用改 Agent 配置。</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">2</span>
+            <h3>照常在原 App 里工作</h3>
+            <p>继续用熟悉的工具给 Agent 发指令。看一眼菜单栏或悬浮气泡，就知道哪些会话需要你。</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">3</span>
+            <h3>带着上下文切回来</h3>
+            <p>打开衔接卡，看过刚才的进展，再把想法带回去。下一步发什么，始终由你决定。</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="privacy" class="privacy" aria-labelledby="privacy-title">
+        <div class="container section-content privacy-layout">
+          <h2 id="privacy-title">仅在本机。<br>原生记录只读。</h2>
+          <ul class="privacy-list" role="list">
+            <li>只读 <code>~/.claude</code> 与 <code>~/.codex</code>，绝不写入，不安装 Hook，也不改 Agent 配置。</li>
+            <li>不调用模型，不用注册账户，没有遥测。想法原样保存在你的 Mac 上。</li>
+            <li>只读取限定范围内的记录并做脱敏，不保留完整对话副本。</li>
+            <li>不会代你输入或向 Agent 发送消息。只有你点击带回时，才复制文字并打开原 App；粘贴和发送由你完成。</li>
+            <li>以 MIT 许可开源，每一行代码都可以查看。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="faq" class="faq container section-content" aria-labelledby="faq-title">
+        <h2 id="faq-title">常见问题</h2>
+        <div class="faq-list">
+          <details open>
+            <summary>macOS 提示无法验证这个 App，怎么办？</summary>
+            <p>早期版本采用临时签名（ad-hoc），尚未经过 Apple 公证。请右键点击 <code>AimSpan.app</code>，选择<strong>打开</strong>，然后再次确认<strong>打开</strong>。有可下载的版本时，会放在 GitHub Releases；如果暂时没有安装包，可以按 GitHub README 的说明从源码构建。</p>
+          </details>
+          <details>
+            <summary>支持哪些 Agent？</summary>
+            <p>支持 Claude Code（Claude 桌面 App 的 Code 页签、CLI、VS Code）和 Codex（桌面 App、CLI、VS Code），通过它们的本地记录读取会话。原生记录格式可能变化；能否精确打开原会话，仍需在真实 App 中验证。</p>
+          </details>
+          <details>
+            <summary>支持 Windows 或 Linux 吗？</summary>
+            <p>AimSpan 目前仅支持 macOS。</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© 2026 Asxing · MIT License</p>
+        <nav aria-label="项目链接">
+          <a href="https://github.com/Asxing/aimspan">GitHub</a>
+          <a href="https://github.com/Asxing/aimspan/releases">发行版本</a>
+          <a href="https://github.com/Asxing/aimspan/issues">问题反馈</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

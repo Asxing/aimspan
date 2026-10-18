@@ -1,0 +1,38 @@
+@import "./tokens.css";
+
+:root { background: transparent; }
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; height: 100%; overflow: hidden; }
+button { font: inherit; color: inherit; background: transparent; border: 0; cursor: pointer; }
+button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: -2px; border-radius: var(--radius-sm); }
+.compact { height: 100%; display: flex; flex-direction: column; background: var(--color-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-popover); overflow: hidden; }
+.compact-header { display: flex; align-items: center; gap: var(--space-3); flex: 0 0 36px; padding: 4px 12px 0; font-size: var(--font-body); }
+.compact-counts { flex: 1; min-width: 0; font-size: var(--font-sm); color: var(--color-secondary); }
+.compact-header button { display: grid; place-items: center; flex-shrink: 0; width: 26px; height: 26px; padding: 0; color: var(--color-secondary); border-radius: var(--radius-xs); }
+.compact-header button:hover, .compact button[aria-pressed=true] { background: var(--color-selected); }
+.compact button:disabled { opacity: .5; cursor: wait; }
+/* Header 36 + footer 36 + 2 px border = the 74 px chrome compactBounds reserves. */
+.compact-rows { min-height: 0; max-height: 496px; overflow-y: auto; flex: 1; padding: 0 6px; }
+.compact-row { position: relative; height: 62px; display: flex; align-items: center; border-radius: var(--radius-md); }
+.compact-row:hover, .compact-row:focus-within { background: var(--color-hover); }
+.compact-open { display: flex; align-items: center; gap: var(--space-4); width: 100%; min-width: 0; text-align: left; padding: 8px; }
+.compact-copy { flex: 1; min-width: 0; }
+.compact-title { display: block; font-size: var(--font-body); line-height: 22px; }
+.compact-title .session-title { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.compact-open small { display: flex; align-items: center; gap: var(--space-3); font-size: var(--font-sm); line-height: 20px; color: var(--color-secondary); white-space: nowrap; overflow: hidden; }
+.compact-open .surface-tag { padding: 0 5px; background: var(--color-elevated); }
+.compact-time { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.compact-time.running { color: var(--color-running); }
+.compact-time.waiting { color: var(--color-waiting); }
+.compact-actions { position: absolute; top: 17px; right: 8px; display: flex; align-items: center; gap: var(--space-2); opacity: 0; pointer-events: none; }
+.compact-actions button { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-elevated); color: var(--color-secondary); }
+.compact-row.needs-you .compact-actions button:last-child { color: var(--color-running); }
+.compact-actions button:hover { background: var(--color-selected); }
+.compact-row:hover .compact-actions, .compact-row:focus-within .compact-actions { opacity: 1; pointer-events: auto; }
+.compact-row:is(:hover,:focus-within) .compact-copy { padding-right: 64px; }
+.compact-row.needs-you:is(:hover,:focus-within) .compact-copy { padding-right: 96px; }
+.compact footer { display: flex; justify-content: space-between; flex: 0 0 36px; border-top: 1px solid var(--color-soft-line); font-size: var(--font-md); padding: 0 12px; }
+.compact footer button { display: flex; align-items: center; gap: var(--space-2); padding: 0; }
+.compact footer .text-action { color: var(--color-action-text); }
+.compact-empty { font-size: var(--font-sm); text-align: center; margin: var(--space-8) 0; color: var(--color-secondary); }
+.compact-error { position: absolute; bottom: 38px; background: var(--color-danger-surface); color: var(--color-danger); padding: var(--space-4); font-size: var(--font-sm); }

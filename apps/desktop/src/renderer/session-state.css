@@ -1,0 +1,10 @@
+.state-marker { display: inline-block; flex: 0 0 8px; width: 8px; height: 8px; border-radius: var(--radius-round); vertical-align: middle; }
+.state-marker.waiting { background: var(--color-waiting-dot); }
+.state-marker.running { background: var(--color-running); animation: session-running 2.4s ease-in-out infinite; }
+.state-marker.idle { border: 1.5px solid var(--color-idle-ring); }
+.state-marker.unknown { border: 1px dashed var(--color-secondary); }
+.session-title { font-weight: 400; }
+.session-title.has-new-result { font-weight: 700; }
+.surface-tag { display: inline-block; flex-shrink: 0; padding: 1px 6px; border: 1px solid var(--color-border); border-radius: var(--radius-xs); background: var(--color-surface-2); color: var(--color-secondary); font-size: var(--font-xs); font-weight: 400; line-height: 1.5; }
+@keyframes session-running { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .45; transform: scale(.82); } }
+@media (prefers-reduced-motion: reduce) { .state-marker.running { animation: none; } }

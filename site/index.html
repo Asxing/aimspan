@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AimSpan — Keep your train of thought while agents work</title>
+    <meta name="description" content="A local macOS companion for Claude Code and Codex. See active sessions, capture ideas in seconds, and catch up when you switch back.">
+    <link rel="canonical" href="https://asxing.github.io/aimspan/">
+    <link rel="alternate" hreflang="en" href="https://asxing.github.io/aimspan/">
+    <link rel="alternate" hreflang="zh-CN" href="https://asxing.github.io/aimspan/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://asxing.github.io/aimspan/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AimSpan — Keep your train of thought while agents work">
+    <meta property="og:description" content="See active Claude Code and Codex sessions, save your ideas, and pick up where you left off. Entirely on your Mac.">
+    <meta property="og:url" content="https://asxing.github.io/aimspan/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta name="theme-color" content="#F5F4EE" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1C1B19" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header container">
+      <a class="brand" href="#top" aria-label="AimSpan home">
+        <img src="assets/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+        <span>AimSpan</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-small language-link" href="zh/" hreflang="zh-CN" lang="zh-CN">中文</a>
+        <a class="button button-small github-button" href="https://github.com/Asxing/aimspan">GitHub</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">For people who run many Claude Code and Codex sessions</p>
+          <h1 id="hero-title">Keep your train of thought while agents work.</h1>
+          <p class="lead">AimSpan sits in your menu bar. See which sessions are running or waiting for you, jot down an idea in seconds, and find out what happened when you switch back.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/Asxing/aimspan/releases/latest">Download for macOS</a>
+            <a class="button" href="https://github.com/Asxing/aimspan">View source</a>
+          </div>
+          <p class="hero-note">Open source · MIT · Runs entirely on your Mac</p>
+        </div>
+
+        <!-- TODO: Add real screenshots under site/assets/screenshots/ using synthetic sessions only. -->
+        <figure class="product-composition" aria-labelledby="preview-caption">
+          <div class="session-panel">
+            <ul class="session-list" role="list" aria-label="Example sessions">
+              <li class="session-row session-waiting">
+                <span class="status-dot waiting-dot" aria-hidden="true"></span>
+                <div class="session-copy">
+                  <p class="session-title">Refine the product scope</p>
+                  <p class="session-meta waiting-text">Waiting for you · ended 8 min ago</p>
+                </div>
+                <span class="idea-count">2 ideas</span>
+              </li>
+              <li class="session-row">
+                <span class="status-dot running-dot" aria-hidden="true"></span>
+                <div class="session-copy">
+                  <p class="session-title">Fix the navigation sidebar on mobile</p>
+                  <p class="session-meta running-text">Running · 6 min</p>
+                </div>
+              </li>
+              <li class="session-row">
+                <span class="status-dot running-dot" aria-hidden="true"></span>
+                <div class="session-copy">
+                  <p class="session-title">Summarize agent memory papers</p>
+                  <p class="session-meta running-text">Running · 41 min</p>
+                </div>
+              </li>
+            </ul>
+            <div class="saved-idea">
+              <p class="idea-label">Your idea, saved for later</p>
+              <p class="idea-text">Also check the bubble count after a restart.</p>
+            </div>
+          </div>
+          <div class="status-bubble" role="img" aria-label="2 running sessions, 1 waiting for you">
+            <span class="running-text" aria-hidden="true">2</span>
+            <span class="waiting-text" aria-hidden="true">1</span>
+          </div>
+          <figcaption id="preview-caption">An example with fictional sessions and ideas.</figcaption>
+        </figure>
+      </section>
+
+      <section id="features" class="features section-band" aria-labelledby="features-title">
+        <div class="container section-content">
+          <h2 id="features-title" class="section-intro">Long agent turns break your focus. AimSpan holds the thread.</h2>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-symbol" aria-hidden="true">
+                <span class="status-dot running-dot"></span>
+                <span class="status-dot waiting-dot"></span>
+              </div>
+              <h3>See what is active</h3>
+              <p>Running and waiting sessions from Claude Code and Codex in one list. A session stays “waiting” until you mark it handled or send a new prompt in its native app.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-symbol"><kbd aria-label="Command Shift Space">⌘ ⇧ Space</kbd></div>
+              <h3>Capture ideas in seconds</h3>
+              <p>Press the shortcut, type, hit Enter. Save an idea to the session it belongs to or the inbox, and get back to what you were doing.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-symbol">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                  <path d="M4 12a8 8 0 1 0 2.3-5.6"></path>
+                  <path d="M4 4v4h4"></path>
+                </svg>
+              </div>
+              <h3>Catch up when you switch back</h3>
+              <p>A catch-up card brings results and recent activity together with your saved ideas. Click to copy ideas and open the native app. You paste and send them yourself.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="container section-content" aria-labelledby="how-title">
+        <h2 id="how-title">How it works</h2>
+        <ol class="steps" role="list">
+          <li>
+            <span class="step-number" aria-hidden="true">1</span>
+            <h3>Install and open</h3>
+            <p>AimSpan finds sessions in your local Claude Code and Codex records. No hooks to install or agent configuration to change.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">2</span>
+            <h3>Keep working as usual</h3>
+            <p>Prompt agents in the apps you already use. Glance at the menu bar or floating bubble to see which sessions need you.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">3</span>
+            <h3>Switch back with context</h3>
+            <p>Open the catch-up card, read what happened, and bring your ideas back. You decide what to send.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="privacy" class="privacy" aria-labelledby="privacy-title">
+        <div class="container section-content privacy-layout">
+          <h2 id="privacy-title">Local only.<br>Read only.</h2>
+          <ul class="privacy-list" role="list">
+            <li>Reads <code>~/.claude</code> and <code>~/.codex</code> read-only. Never writes to them, installs hooks, or changes agent configuration.</li>
+            <li>No model calls, no account, no telemetry. Your ideas stay on your Mac, stored exactly as you wrote them.</li>
+            <li>Reads bounded, redacted observations without keeping a full transcript copy.</li>
+            <li>Never types into or sends to an agent. Bringing ideas back only copies text and opens the native app after your click. You paste and send.</li>
+            <li>Open source under the MIT License. You can read every line.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="faq" class="faq container section-content" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+        <div class="faq-list">
+          <details open>
+            <summary>macOS says the app cannot be verified</summary>
+            <p>Early builds are ad-hoc signed and not notarized. Right-click <code>AimSpan.app</code>, choose <strong>Open</strong>, then confirm <strong>Open</strong>. Downloads appear on GitHub Releases when available; if there is no release asset yet, follow the source build instructions in the GitHub README.</p>
+          </details>
+          <details>
+            <summary>Which agents are supported?</summary>
+            <p>Claude Code in the Claude desktop app’s Code tab, CLI, and VS Code; and Codex in its desktop app, CLI, and VS Code. AimSpan reads their local records. Native formats can change, and exact session opening still needs real-app verification.</p>
+          </details>
+          <details>
+            <summary>Windows or Linux?</summary>
+            <p>AimSpan is macOS only.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© 2026 Asxing · MIT License</p>
+        <nav aria-label="Project links">
+          <a href="https://github.com/Asxing/aimspan">GitHub</a>
+          <a href="https://github.com/Asxing/aimspan/releases">Releases</a>
+          <a href="https://github.com/Asxing/aimspan/issues">Issues</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

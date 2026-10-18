@@ -1,0 +1,35 @@
+name: Feature request
+description: Suggest an improvement to the local session, idea or catch-up workflow.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        AimSpan helps you see active sessions, capture ideas and catch up in your existing agent apps.
+        Describe your need with synthetic examples; do not include real transcripts or personal data.
+        Read the product scope at https://github.com/Asxing/aimspan/blob/HEAD/docs/PRODUCT.md.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What interrupts your workflow, and when does it happen?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the user-visible change and how it fits the current product scope.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or current workaround
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Data check
+      options:
+        - label: This request contains no real transcripts, user databases, credentials or personal data.
+          required: true

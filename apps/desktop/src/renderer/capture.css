@@ -1,0 +1,46 @@
+@import "./tokens.css";
+
+:root { background: transparent; }
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; height: 100%; overflow: hidden; }
+button, input, textarea { font: inherit; color: inherit; }
+button { border: 0; background: transparent; cursor: pointer; }
+button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: -2px; border-radius: var(--radius-sm); }
+.capture { height: 100%; border-radius: var(--radius-lg); border: 1px solid var(--color-border); background: var(--color-capture-surface); box-shadow: var(--shadow-popover); padding: 12px 16px; display: flex; flex-direction: column; gap: var(--space-4); overflow: hidden; }
+.capture-chips { display: flex; gap: var(--space-3); flex-shrink: 0; overflow-x: auto; }
+.capture-chips button { display: inline-flex; align-items: center; gap: var(--space-2); white-space: nowrap; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 3px 8px; font-size: var(--font-sm); }
+.capture-chips button:hover { background: var(--color-hover); }
+.capture-chips button[aria-pressed=true] { background: var(--color-accent-soft); border-color: var(--color-accent); color: var(--color-action-text); }
+.capture-chips button:disabled { opacity: .5; cursor: default; }
+.capture-chips kbd { font: inherit; color: var(--color-secondary); }
+.capture-chips [aria-pressed=true] kbd { color: inherit; }
+.capture-target { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-3); font-size: var(--font-sm); flex-shrink: 0; }
+.capture-target-select { display: flex; align-items: center; gap: var(--space-3); flex: 1; min-width: 0; text-align: left; padding: 0; position: relative; padding-right: 110px; }
+.capture-target-select:not(:has(.capture-metadata)) { padding-right: 0; }
+.capture-close { flex-shrink: 0; min-height: 22px; padding: 0 var(--space-2); border: 1px solid var(--color-border); border-radius: var(--radius-xs); color: var(--color-secondary); font-size: var(--font-xs); }
+.capture-close:hover { background: var(--color-hover); }
+.capture-metadata { display: contents; color: var(--color-secondary); }
+.capture-project { display: flex; align-items: center; gap: var(--space-3); flex-shrink: 0; max-width: 40%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.capture-title { display: flex; align-items: center; gap: var(--space-3); min-width: 0; flex: 1; }
+.capture-title .session-title { font-weight: 400; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.capture-time { position: absolute; right: 0; max-width: 106px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.idea-badge { flex-shrink: 0; font-size: var(--font-xs); color: var(--color-secondary); border: 1px solid var(--color-border); padding: 0 5px; border-radius: var(--radius-round); }
+.capture-target.waiting .capture-time { color: var(--color-waiting); }
+.capture-target.running .capture-time { color: var(--color-running); }
+textarea, .capture-filter { flex: 1; min-height: 0; width: 100%; }
+textarea { resize: none; border: 0; border-radius: var(--radius-sm); background: transparent; padding: var(--space-2) 0; font-size: var(--font-lg); line-height: 1.45; }
+/* A quiet baseline preserves keyboard focus without a heavy enclosing outline. */
+textarea:focus-visible, .capture-filter input:focus-visible { outline: none; box-shadow: inset 0 -1px 0 var(--color-focus); }
+.capture-filter { display: flex; flex-direction: column; gap: var(--space-3); }
+.capture-search { display: flex; align-items: center; gap: var(--space-3); border-bottom: 1px solid var(--color-border); color: var(--color-secondary); }
+.capture-filter input { min-width: 0; width: 100%; border: 0; background: transparent; padding: var(--space-2) 0; color: var(--color-text); }
+.capture-matches { flex: 1; display: flex; flex-direction: column; gap: 1px; overflow-x: hidden; overflow-y: auto; min-height: 30px; }
+.capture-matches button { display: flex; align-items: center; gap: var(--space-4); flex-shrink: 0; text-align: left; white-space: nowrap; overflow: hidden; border: 0; background: none; border-radius: var(--radius-xs); padding: 4px 8px; }
+.match-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.capture-matches small { max-width: 25%; overflow: hidden; text-overflow: ellipsis; color: var(--color-secondary); font-size: var(--font-sm); }
+.capture-matches button:hover, .capture-matches [aria-selected=true] { background: var(--color-surface); }
+/* The picker keeps the existing close control and hides redundant target text. */
+.capture:has(.capture-filter) .capture-title { display: none; }
+footer { min-height: 16px; flex-shrink: 0; display: flex; justify-content: space-between; gap: var(--space-4); font-size: var(--font-sm); color: var(--color-secondary); }
+footer span:first-child { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.over-limit, [role=alert] { color: var(--color-danger); }

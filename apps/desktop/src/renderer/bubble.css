@@ -1,0 +1,19 @@
+@import "./tokens.css";
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; }
+.bubble { position: absolute; top: 0; width: 56px; height: 56px; border: 1px solid var(--color-border); padding: 0; border-radius: var(--radius-round); background: var(--color-elevated); color: var(--color-text); box-shadow: var(--shadow-bubble); cursor: pointer; user-select: none; touch-action: none; transition: left 180ms ease, background 180ms ease; }
+.bubble:focus-visible { outline: 2px solid var(--color-focus); outline-offset: -3px; }
+.bubble.dimmed { background: var(--color-elevated); color: var(--color-secondary); }
+.bubble-counts { position: absolute; inset: 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.bubble-count { font-size: var(--font-lg); line-height: 17px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.bubble-count:only-child { font-size: var(--font-lg); }
+/* Keep the entire number in the visible half, on either screen edge. */
+.bubble[data-revealed=false][data-side=right] .bubble-counts { right: 28px; left: 1px; }
+.bubble[data-revealed=false][data-side=left] .bubble-counts { left: 28px; right: 1px; }
+.bubble-ring { position: absolute; inset: 2px; border: 1px solid transparent; border-radius: var(--radius-round); }
+.bubble-ring.running { border-color: var(--color-running); animation: breathe 2.4s ease-in-out infinite; }
+.bubble-pulse { position: absolute; inset: 0; border: 3px solid var(--color-waiting); border-radius: var(--radius-round); animation: pulse 1.5s ease-out both; }
+@keyframes breathe { 50% { opacity: .45; } }
+@keyframes pulse { from { opacity: 1; } to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .bubble { transition: none; } .bubble-ring.running { animation: none; } .bubble-pulse { animation: none; } }
